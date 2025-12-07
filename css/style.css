@@ -234,6 +234,9 @@ nav a.active {
 .work-item {
     width: 300px;
     text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .work-item img {
@@ -242,6 +245,11 @@ nav a.active {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover img {
+    transform: scale(1.05);
 }
 
 .work-item h3 {
@@ -277,6 +285,51 @@ nav a.active {
     font-size: 20px;
 }
 
+/* Work Detail Page */
+.work-detail {
+    padding: 80px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-block;
+    color: #7B90D1;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.work-detail h1 {
+    font-size: 42px;
+    color: #7B90D1;
+    margin-bottom: 30px;
+}
+
+.work-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4A4A4A;
+    margin-bottom: 50px;
+    max-width: 800px;
+}
+
+.work-image {
+    width: 100%;
+    text-align: center;
+}
+
+.work-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header {
@@ -302,5 +355,17 @@ nav a.active {
     .work-item {
         width: 100%;
         max-width: 400px;
+    }
+    
+    .work-detail {
+        padding: 50px 20px;
+    }
+    
+    .work-detail h1 {
+        font-size: 32px;
+    }
+    
+    .work-description {
+        font-size: 16px;
     }
 }

@@ -237,6 +237,7 @@ nav a.active {
     text-decoration: none;
     color: inherit;
     display: block;
+    position: relative;
 }
 
 .work-item img {
@@ -245,16 +246,42 @@ nav a.active {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease;
+    display: block;
+    position: relative;
 }
 
 .work-item:hover img {
-    transform: scale(1.05);
+    opacity: 0.2;
 }
 
 .work-item h3 {
-    color: #4A4A4A;
-    font-size: 18px;
+    display: none;
+}
+
+.work-item::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7B90D1;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.work-item:hover::after {
+    opacity: 1;
 }
 
 /* Contact Section */

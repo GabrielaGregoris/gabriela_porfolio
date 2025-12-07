@@ -67,8 +67,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7B90D1;
     text-decoration: none;
+    overflow: hidden;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.social-icons a {
+    color: #7B90D1;
     font-size: 18px;
 }
 
@@ -111,8 +121,25 @@ nav a.active {
 }
 
 .header-social a {
-    color: #7B90D1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #E0E6F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
+    overflow: hidden;
+}
+
+.header-social a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.header-social a {
+    color: #7B90D1;
     font-size: 18px;
 }
 
@@ -154,8 +181,18 @@ nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7B90D1;
     text-decoration: none;
+    overflow: hidden;
+}
+
+.hero-social a img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.hero-social a {
+    color: #7B90D1;
     font-size: 20px;
 }
 

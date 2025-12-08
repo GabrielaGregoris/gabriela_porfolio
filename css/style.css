@@ -376,12 +376,13 @@ nav a.active {
 
 .work-image-collage img {
     width: 100%;
-    max-width: 500px; /* You can adjust this */
+    max-width: 300px;
     height: auto;
-    object-fit: contain; /* Prevents distortion */
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {

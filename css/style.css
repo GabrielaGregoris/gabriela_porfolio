@@ -457,6 +457,24 @@ nav a.active {
     box-shadow: 0 5px 15px rgba(123, 144, 209, 0.3);
 }
 
+.site-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #7B90D1;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 18px;
+    margin: 20px 0 40px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123, 144, 209, 0.3);
+}
+
+
 /* Footer */
 footer {
     background-color: #E0E6F0;

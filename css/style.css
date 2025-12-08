@@ -509,3 +509,10 @@ footer p {
     display: block;
     margin: 0 auto;
 }
+
+.poster-ticket-img {
+    width: 45% !important;   /* adjust this number */
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}

@@ -532,7 +532,7 @@ footer p {
 }
 
 .mannequin-img {
-    width: 60% !important;   /* adjust size here */
+    width: 65% !important;   /* adjust size here */
     max-width: 500px;
     display: block;
     margin: 0 auto;

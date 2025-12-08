@@ -375,13 +375,12 @@ nav a.active {
 }
 
 .work-image-collage img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px; /* You can adjust this */
     height: auto;
+    object-fit: contain; /* Prevents distortion */
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
 }
 
 /* Responsive */

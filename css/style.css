@@ -525,7 +525,7 @@ footer p {
 }
 
 .catalogue-img {
-    width: 45% !important;     /* adjust this number */
+    width: 50% !important;     /* adjust this number */
     max-width: 500px;
     display: block;
     margin: 0 auto;

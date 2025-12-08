@@ -495,3 +495,10 @@ footer p {
     display: block;
     margin: 0 auto;
 }
+
+.fashion-mag-img {
+    width: 45% !important;   /* adjust this number */
+    max-width: 500px;        /* optional size cap */
+    display: block;
+    margin: 0 auto;
+}

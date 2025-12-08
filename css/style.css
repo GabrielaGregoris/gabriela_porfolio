@@ -490,7 +490,8 @@ footer p {
 }
 
 .type-poster-img {
-    max-width: 50%; 
+    width: 40% !important;   /* Make image smaller */
+    max-width: 400px;        /* Optional: sets a limit */
     display: block;
     margin: 0 auto;
 }

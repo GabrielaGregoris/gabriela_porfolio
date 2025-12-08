@@ -516,3 +516,10 @@ footer p {
     display: block;
     margin: 0 auto;
 }
+
+.mag-cover-img {
+    width: 45% !important;   /* adjust size here */
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}

@@ -217,10 +217,6 @@ nav a.active {
     display: block;
 }
 
-.scroll-down {
-    color: #7B90D1;
-    font-size: 24px;
-}
 
 /* Work Section */
 .work {
@@ -408,4 +404,18 @@ nav a.active {
     .work-description {
         font-size: 16px;
     }
+}
+
+/* Footer */
+footer {
+    background-color: #E0E6F0;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    color: #4A4A4A;
+    font-size: 16px;
+    margin: 0;
 }

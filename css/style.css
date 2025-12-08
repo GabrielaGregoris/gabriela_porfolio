@@ -502,3 +502,10 @@ footer p {
     display: block;
     margin: 0 auto;
 }
+
+.storyboard-img {
+    width: 50% !important;   /* Change this number to resize */
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}

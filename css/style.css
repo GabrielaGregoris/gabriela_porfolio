@@ -406,4 +406,21 @@ footer p {
     .work-image-collage img {
         max-width: 90%;
     }
+
+    /* Specifically for the Figma Slide Embed */
+.work-image iframe {
+    width: 100%;
+    max-width: 850px; /* Gives the slides more room than the photos */
+    display: block;
+    margin: 0 auto 30px auto;
+    aspect-ratio: 16 / 9; /* Keeps the slide proportions correct */
+}
+
+/* Ensure it looks good on mobile */
+@media (max-width: 768px) {
+    .work-image iframe {
+        height: 300px; /* Shrinks the height so it fits on phone screens */
+    }
+}
+
 }

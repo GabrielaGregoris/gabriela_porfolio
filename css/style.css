@@ -267,15 +267,40 @@ nav a.active {
     margin-bottom: 40px;
 }
 
+/* Standard Detail Images */
 .work-image img {
-        display: block;
-        margin: 0 auto;
-        width: auto;
-        max-width: 40%; 
-        max-height: 400px; 
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-        object-fit: contain; 
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 35%; /* Reduced from 40% for better viewability */
+    max-height: 350px; 
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    object-fit: contain; 
+}
+
+/* Collage Images (Fix for Social Media Page) */
+.work-image-collage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.work-image-collage img {
+    width: 100%;
+    max-width: 350px; /* Specifically makes insta_gabby and banner smaller */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Centers the Behance embed */
+.work-image-collage iframe {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
 }
 
 /* BUTTONS */
@@ -374,5 +399,11 @@ footer p {
 
     .work-description {
         font-size: 16px;
+    }
+
+    /* Make images fill more of the screen on mobile */
+    .work-image img,
+    .work-image-collage img {
+        max-width: 90%;
     }
 }

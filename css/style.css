@@ -268,8 +268,9 @@ nav a.active {
 }
 
 .work-image img {
-    width: 100%;
-    max-width: 900px;
+    width: auto;          
+    max-width: 600px;
+    max-height: 500px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }

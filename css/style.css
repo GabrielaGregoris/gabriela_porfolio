@@ -1,16 +1,20 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BASE */
 body {
     font-family: Arial, sans-serif;
     background-color: #F0F2F7;
     color: #4A4A4A;
 }
 
-/* Welcome Page */
+/* -------------------------
+   WELCOME PAGE
+-------------------------- */
 .welcome-page {
     display: flex;
     justify-content: center;
@@ -45,51 +49,58 @@ body {
     display: inline-block;
     padding: 15px 50px;
     background-color: #7B90D1;
-    color: white;
+    color: #fff;
     text-decoration: none;
     border-radius: 50px;
     font-size: 20px;
     margin-bottom: 50px;
 }
 
-.social-icons {
+/* SOCIAL ICONS */
+.social-icons,
+.hero-social,
+.header-social {
     display: flex;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.social-icons a {
+.social-icons a,
+.hero-social a,
+.header-social a {
     width: 50px;
     height: 50px;
-    border-radius: 10px;
     background-color: #E0E6F0;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    overflow: hidden;
 }
 
-.social-icons a {
-    color: #7B90D1;
-    font-size: 30px;
-    line-height: 1;
+.hero-social a {
+    width: 55px;
+    height: 55px;
 }
 
-.social-icons a img {
+.header-social a {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons img,
+.hero-social img,
+.header-social img {
     width: 30px;
     height: 30px;
     object-fit: contain;
     mix-blend-mode: multiply;
-    display: block;
 }
 
-/* Portfolio Page */
-.portfolio-page {
-    min-height: 100vh;
-}
-
+/* -------------------------
+   HEADER
+-------------------------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -115,49 +126,14 @@ nav a.active {
 .header-name {
     font-size: 24px;
     color: #7B90D1;
-    text-align: center;
 }
 
-.header-social {
-    display: flex;
-    gap: 15px;
-}
-
-.header-social a {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: #E0E6F0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    overflow: hidden;
-}
-
-.header-social a {
-    color: #7B90D1;
-    font-size: 24px;
-    line-height: 1;
-}
-
-.header-social a img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-    display: block;
-}
-
-/* Hero Section */
+/* -------------------------
+   HERO
+-------------------------- */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .hero h2 {
@@ -170,55 +146,21 @@ nav a.active {
     display: inline-block;
     padding: 15px 40px;
     background-color: #7B90D1;
-    color: white;
-    text-decoration: none;
+    color: #fff;
     border-radius: 50px;
-    font-size: 18px;
+    text-decoration: none;
     margin-bottom: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .see-work-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(123, 144, 209, 0.3);
+    box-shadow: 0 5px 15px rgba(123,144,209,0.3);
 }
 
-.hero-social {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.hero-social a {
-    width: 55px;
-    height: 55px;
-    border-radius: 12px;
-    background-color: #E0E6F0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    overflow: hidden;
-}
-
-.hero-social a {
-    color: #7B90D1;
-    font-size: 32px;
-    line-height: 1;
-}
-
-.hero-social a img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-    display: block;
-}
-
-
-/* Work Section */
+/* -------------------------
+   WORK GRID
+-------------------------- */
 .work {
     padding: 80px 50px;
     max-width: 1200px;
@@ -241,87 +183,62 @@ nav a.active {
 
 .work-item {
     width: 300px;
-    text-align: center;
+    position: relative;
     text-decoration: none;
     color: inherit;
-    display: block;
-    position: relative;
 }
 
 .work-item img {
-    width: 70%;
+    width: 100%;
     height: 200px;
     object-fit: contain;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: opacity 0.3s ease;
-    display: block;
-    position: relative;
     background-color: #E0E6F0;
+    border-radius: 12px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .work-item:hover img {
-    opacity: 0.2;
+    opacity: 0.15;
+    transform: scale(1.03);
 }
 
 .work-item h3 {
-    display: none;
+    position: absolute;
+    left: -9999px;
 }
 
+/* HOVER OVERLAY */
 .work-item::after {
     content: attr(data-title);
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7B90D1;
-    font-size: 24px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: #F5D67B;
+
+    font-size: 20px;
     font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    text-align: center;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .work-item:hover::after {
     opacity: 1;
 }
 
-/* Contact Section */
-.contact {
-    padding: 80px 50px;
-    text-align: center;
-    background-color: #E0E6F0;
-}
-
-.contact h2 {
-    font-size: 36px;
-    color: #7B90D1;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.contact-button {
-    display: inline-block;
-    padding: 15px 50px;
-    background-color: #7B90D1;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 20px;
-}
-
-/* Work Detail Page */
+/* -------------------------
+   WORK DETAIL PAGES
+-------------------------- */
 .work-detail {
     padding: 80px 50px;
     max-width: 1000px;
@@ -329,10 +246,8 @@ nav a.active {
 }
 
 .back-link {
-    display: inline-block;
     color: #7B90D1;
     text-decoration: none;
-    margin-bottom: 30px;
     font-size: 18px;
 }
 
@@ -349,191 +264,111 @@ nav a.active {
 .work-description {
     font-size: 18px;
     line-height: 1.8;
-    color: #4A4A4A;
-    margin-bottom: 50px;
-    max-width: 800px;
-}
-
-.work-image {
-    width: 100%;
-    text-align: center;
+    margin-bottom: 40px;
 }
 
 .work-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.work-image-collage {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-.work-image-collage img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+/* BUTTONS */
+.figma-button,
+.site-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #7B90D1;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.figma-button:hover,
+.site-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123,144,209,0.3);
+}
 
-/* Responsive */
+/* -------------------------
+   CONTACT
+-------------------------- */
+.contact {
+    background-color: #E0E6F0;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #7B90D1;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    padding: 15px 50px;
+    background-color: #7B90D1;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+footer {
+    background-color: #E0E6F0;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* -------------------------
+   RESPONSIVE
+-------------------------- */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         gap: 20px;
         padding: 20px;
     }
-    
-    .welcome-container h1,
+
     .hero h2 {
         font-size: 32px;
     }
-    
+
     .work {
         padding: 50px 20px;
     }
-    
-    .work-items {
-        flex-direction: column;
-        align-items: center;
-    }
-    
+
     .work-item {
         width: 100%;
         max-width: 400px;
     }
-    
+
     .work-detail {
         padding: 50px 20px;
     }
-    
+
     .work-detail h1 {
         font-size: 32px;
     }
-    
+
     .work-description {
         font-size: 16px;
     }
-}
-.figma-button {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #7B90D1;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 18px;
-    margin: 30px 0 40px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.figma-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(123, 144, 209, 0.3);
-}
-
-.figma-button {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #7B90D1;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 18px;
-    margin: 30px 0 40px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.figma-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(123, 144, 209, 0.3);
-}
-
-.site-button {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #7B90D1;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 18px;
-    margin: 20px 0 40px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.site-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(123, 144, 209, 0.3);
-}
-
-
-/* Footer */
-footer {
-    background-color: #E0E6F0;
-    padding: 30px 20px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-footer p {
-    color: #4A4A4A;
-    font-size: 16px;
-    margin: 0;
-}
-
-.type-poster-img {
-    width: 40% !important;   /* Make image smaller */
-    max-width: 400px;        /* Optional: sets a limit */
-    display: block;
-    margin: 0 auto;
-}
-
-.fashion-mag-img {
-    width: 45% !important;   /* adjust this number */
-    max-width: 500px;        /* optional size cap */
-    display: block;
-    margin: 0 auto;
-}
-
-.storyboard-img {
-    width: 50% !important;   /* Change this number to resize */
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
-}
-
-.poster-ticket-img {
-    width: 45% !important;   /* adjust this number */
-    max-width: 500px;
-    display: block;
-    margin: 0 auto;
-}
-
-.mag-cover-img {
-    width: 65% !important;   /* adjust size here */
-    max-width: 500px;
-    display: block;
-    margin: 0 auto;
-}
-
-.catalogue-img {
-    width: 50% !important;     /* adjust this number */
-    max-width: 500px;
-    display: block;
-    margin: 0 auto;
-}
-
-.mannequin-img {
-    width: 65% !important;   /* adjust size here */
-    max-width: 500px;
-    display: block;
-    margin: 0 auto;
 }

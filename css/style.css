@@ -139,7 +139,42 @@ nav a.active {
 .hero h2 {
     font-size: 48px;
     color: #7B90D1;
+    margin-bottom: 30px;
+}
+
+.hero-profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 3px solid #fff;
+}
+
+.hero-bio-columns {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.bio-column {
+    flex: 1;
+}
+
+.bio-column p {
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+@media (max-width: 768px) {
+    .hero-bio-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .see-work-button {

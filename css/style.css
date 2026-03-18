@@ -147,13 +147,18 @@ nav a.active {
 }
 
 .hero-profile-img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border: 3px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.hero-profile-img:hover {
+    transform: scale(1.05);
 }
 
 .hero-bio-columns {

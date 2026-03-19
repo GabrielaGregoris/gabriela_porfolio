@@ -1,0 +1,230 @@
+/* CUSTOM STYLES FOR SOCIAL MEDIA DETAIL PAGE */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-blue: #7B90D1;
+    --navy-text: #2D3E50;
+    --light-gray: #F8F9FB;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.portfolio-page .work-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HERO SECTION */
+.detail-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.hero-content .back-link {
+    display: inline-block;
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 24px;
+    transition: opacity 0.3s;
+}
+
+.hero-content .back-link:hover {
+    opacity: 0.7;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.hero-content .work-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.hero-image-container {
+    perspective: 1000px;
+}
+
+.hero-mockup {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    box-shadow: var(--glass-shadow);
+    transform: rotateY(-10deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+}
+
+.hero-mockup:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+}
+
+/* KEY RESULTS SECTION */
+.key-results {
+    margin-bottom: 80px;
+}
+
+.key-results h2 {
+    font-size: 32px;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.result-card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-10px);
+}
+
+.result-card .number {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.result-card .label {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* SERVICES SECTION */
+.services-section {
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 80px;
+}
+
+.services-section h2 {
+    font-size: 32px;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.service-item:last-child {
+    margin-bottom: 0;
+}
+
+.check-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.check-icon::after {
+    content: '';
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+    margin-top: -3px;
+}
+
+.service-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.service-text strong {
+    color: var(--navy-text);
+}
+
+/* BANNER SECTION */
+.banner-section {
+    margin-bottom: 80px;
+}
+
+.full-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .detail-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-mockup {
+        transform: none;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .hero-mockup:hover {
+        transform: scale(1.05);
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .services-section {
+        padding: 40px 20px;
+    }
+    
+    .service-text {
+        font-size: 16px;
+    }
+}

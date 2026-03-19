@@ -722,3 +722,98 @@ footer {
 .portfolio-page footer {
     background: #e9edf5;
 }
+/* =========================
+   WANDERLUST JOURNAL SPECIFIC
+========================= */
+
+.wl-feature-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.wl-feature-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(122, 139, 189, 0.08);
+}
+
+.wl-feature-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #e5eaf7;
+    color: #5f6fa8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.wl-feature-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.wl-feature-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A4A4A;
+    line-height: 1.4;
+}
+
+.wl-image-container {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 40px 50px 40px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(122, 139, 189, 0.1);
+    margin-bottom: 40px;
+}
+
+.wl-image-container img {
+    width: 100%;
+    /* Remove max-width if we want it to span the container, but limit it for large screens */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 40px auto;
+    display: block;
+}
+
+.wl-button-wrapper {
+    text-align: center;
+}
+
+.wl-site-button {
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: #7a8bbd;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.wl-site-button:hover {
+    background-color: #5f6fa8;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .wl-image-container {
+        padding: 20px;
+    }
+    .wl-feature-card {
+        min-width: 100%;
+    }
+}

@@ -817,3 +817,177 @@ footer {
         min-width: 100%;
     }
 }
+
+/* =========================
+   KINGSWAY THEATER SPECIFIC
+========================= */
+
+.kw-feature-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.kw-feature-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(122, 139, 189, 0.08);
+}
+
+.kw-feature-icon {
+    width: 44px;
+    height: 44px;
+    background-color: #e5eaf7;
+    color: #5f6fa8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.kw-feature-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.kw-feature-text {
+    color: #4A4A4A;
+}
+
+.kw-feature-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.kw-feature-text p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+    margin: 0;
+}
+
+.kw-showcase-container {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(122, 139, 189, 0.1);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.kw-showcase-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.kw-showcase-info {
+    flex: 0 0 300px;
+}
+
+.kw-showcase-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin-bottom: 25px;
+}
+
+.kw-info-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.kw-info-icon {
+    width: 44px;
+    height: 44px;
+    background-color: #e5eaf7;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #5f6fa8;
+}
+
+.kw-info-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.kw-info-text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.kw-info-text strong {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.kw-info-divider {
+    border: 0;
+    height: 1px;
+    background-color: #eaedf4;
+    margin: 20px 0;
+}
+
+.kw-showcase-image {
+    flex: 1;
+    text-align: center;
+}
+
+.kw-showcase-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.kw-button-wrapper {
+    text-align: center;
+}
+
+.kw-site-button {
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: #7a8bbd;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.kw-site-button:hover {
+    background-color: #5f6fa8;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 850px) {
+    .kw-showcase-content {
+        flex-direction: column;
+    }
+    .kw-showcase-info {
+        flex: auto;
+        width: 100%;
+    }
+    .kw-feature-card {
+        min-width: 100%;
+    }
+}

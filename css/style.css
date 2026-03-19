@@ -632,3 +632,91 @@ footer {
     border-radius: 12px;
     border: none;
 }
+
+/* =========================
+   CASE STUDY ONLY STYLES
+========================= */
+
+.portfolio-page {
+    background: #f5f7fb;
+    color: #2c2c2c;
+}
+
+/* HEADINGS */
+.portfolio-page h1,
+.portfolio-page h2,
+.portfolio-page h3 {
+    color: #5f6fa8;
+}
+
+/* DESCRIPTION */
+.portfolio-page .work-description {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* META TEXT */
+.portfolio-page .meta {
+    color: #6b7280;
+}
+
+/* BACK LINK */
+.portfolio-page .back-link {
+    color: #7a8bbd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.portfolio-page .back-link:hover {
+    text-decoration: underline;
+}
+
+/* BUTTON */
+.portfolio-page .figma-button {
+    background: #7a8bbd;
+    color: white;
+    border-radius: 25px;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.portfolio-page .figma-button:hover {
+    background: #5f6fa8;
+}
+
+/* FEATURE CARDS */
+.portfolio-page .feature-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(122, 139, 189, 0.15);
+    transition: 0.2s ease;
+}
+
+.portfolio-page .feature-card:hover {
+    transform: translateY(-4px);
+}
+
+/* SECTION HEADINGS */
+.portfolio-page .case-section h2 {
+    color: #7a8bbd;
+}
+
+/* IMAGES */
+.portfolio-page .case-image img {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(122, 139, 189, 0.2);
+}
+
+/* FIGMA EMBED */
+.portfolio-page .work-image iframe {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(122, 139, 189, 0.15);
+}
+
+/* FOOTER (only on this page) */
+.portfolio-page footer {
+    background: #e9edf5;
+}

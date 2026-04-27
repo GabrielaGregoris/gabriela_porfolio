@@ -1135,3 +1135,83 @@ footer {
     }
 }
 
+/* =========================
+   GLOBAL LIGHTBOX
+========================= */
+
+/* Hover effects for clickable images */
+.lightbox-trigger {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.lightbox-trigger:hover {
+    transform: scale(1.02);
+    /* Alternative visual feedback:
+       opacity: 0.85; 
+    */
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Base Lightbox Image Fitting */
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    /* For smooth appearance */
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-image {
+    transform: scale(1);
+}
+
+/* Close Button Setup */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: bold;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+    z-index: 1001; /* Ensure above image */
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Body scroll locking */
+body.lightbox-open {
+    overflow: hidden;
+}
